@@ -1,0 +1,46 @@
+
+.dos{
+  width:70vw;
+  height: 15vh;
+  display:-webkit-inline-flex;
+  align-items:unset;
+  justify-content:end;
+  background:  linear-gradient(to top,
+   rgba(0 0 0 / .0), 
+  rgba(0 0 0 /.0)), 
+  url(/Chailogo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+.wrap{
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:  linear-gradient(to top,
+   rgba(0 0 0 / .1), 
+  rgba(0 0 0 /.95)), 
+  url(/this.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.wrap-texto{
+  color: #ffffff;
+  text-align: center;
+  width: 50%;
+}
+
+
+.three{
+  font-size: 30px;
+  text-decoration: none;
+}
+a.three:link {color: #ff0000;}
+a.three:visited {color: #000000;}
+a.three:hover {background: #ff7c7c;}
