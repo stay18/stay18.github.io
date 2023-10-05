@@ -10,40 +10,21 @@
 
 </head>
 <body>
-    <header class=" header">
-
-        <div class="menu">
-                <a href="#" class="logo">logo</a>
-                <input type="checkbox" id="menu">
-                <label for="menu">
-                    <img src="im" alt="">
-                </label>
-
-        </div>
-    </header>
-  <p class="dos">
+    <h1>Registro de Alumnos</h1>
+    <form action="registrar.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
         
-    </p>
+        <label for="apellido_paterno">Apellido Paterno:</label>
+        <input type="text" id="apellido_paterno" name="apellido_paterno" required><br><br>
 
-   
-    <a class="three" href="https://www.facebook.com/profile.php?id=100083676005515" target="_blank">El Pibe Motosierra</a>
+        <label for="apellido_materno">Apellido Materno:</label>
+        <input type="text" id="apellido_materno" name="apellido_materno" required><br><br>
 
-    <div class="wrap">
-        <div class="wrap-texto">
-            <h1 > 
-                texto super puesto
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur 
-                adipisicing elit. Illo ipsam quam iste 
-                nostrum ducimus commodi officiis, optio 
-                quis maiores laboriosam officia quasi nobis
-            cumque, similique eos magni assumenda distinctio! Fuga?
-            </p>
-        </div>
-    </div>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_flKbsZoAHg?autoplay=1&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-   
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+        
+        <input type="submit" value="Registrar">
+    </form>
 </body>
 </html>
