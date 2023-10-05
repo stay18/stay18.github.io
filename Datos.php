@@ -3,6 +3,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre = $_POST["nombre"];
+    
     $apellidoPaterno = $_POST["apellido_paterno"];
     $apellidoMaterno = $_POST["apellido_materno"];
     $fechaNacimiento = $_POST["fecha_nacimiento"];
