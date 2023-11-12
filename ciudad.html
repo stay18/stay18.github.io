@@ -1,0 +1,262 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select de País, Estado y Ciudad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-warning">
+        <span class="navbar-text"></span>
+    </nav>
+
+    <!-- Barra de Navegación Blanca con Enlaces -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavWhite" aria-controls="navbarNavWhite" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavWhite">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Prepa">Prepa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#form">Inscripciones </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Imagen superpuesta -->
+    <img src="Instituto Lincoln logo (1)-PhotoRoom (1).jpg" class="overlay-image img-fluid" alt="Imagen superpuesta">
+
+<br><br><br><br>
+    <section id="Inicio">
+       
+        <h2 >
+            <br><br>
+            ¿POR QUÉ ESTUDIAR EN INSTITUTO LINCOLN?
+            <br><br>
+        
+         
+        </h2>
+        <div class="inicio">
+     
+    </div>
+    
+    <br><br><br>
+    </section>
+    <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>  <br><br><br>
+    <section id="form">
+        <div class="login-container">
+          
+            <h2>DATOS DEL ASPIRANTE</h2>
+        
+            <label for="apellido_p">Apellido Paterno:</label> <br>
+            <input type="text" name="apellido_p" id="apellido_p" required><br><br>
+        
+            <label for="apellido_m">Apellido Materno:</label><br>
+            <input type="text" name="apellido_m" id="apellido_m" required><br><br>
+        
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" name="nombre" id="nombre" required><br><br>
+        
+            <label for="fecha">Fecha de registro:</label><br>
+            <input type="date" name="fecha" id="fecha" required><br><br>
+      
+            <h2>DATOS GENERALES</h2>
+        
+            <label for="curp">CURP:</label><br>
+            <input type="text" name="curp" id="curp" required><br><br>
+        
+            <label for="Sexo">Sexo:</label><br>
+            <select name="opciones" id="Sexo"><br>
+                <option value="opcion1">Masculino</option>
+                <option value="opcion2">Femenino</option>
+            </select>
+            <br><br>
+        
+            <label for="discapacidad">ingrese en caso de tener alguna discapacidad:</label><br>
+            <input type="text" name="discapacidad" id="discapacidad" ><br><br>
+      
+            <label for="nacimiento">Fecha de Nacimiento:</label><br>
+            <input type="date" name="nacimiento" id="nacimiento" required><br><br>
+        
+            <h2>Lugar de nacimiento</h2>
+            <label for="countrySelect">País:</label>
+            <select id="countrySelect" onchange="cargarEstados('countrySelect', 'stateSelect')">
+                <option value="0">Selecciona un país</option>
+                <option value="México">México</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Canadá">Canadá</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="España">España</option>
+                <option value="Estados Unidos">Estados Unidos</option>
+                <option value="Francia">Francia</option>
+                <option value="India">India</option>
+                <option value="Italia">Italia</option>
+                <option value="Japón">Japón</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="Rusia">Rusia</option>      
+              </select>
+      
+            <label for="stateSelect">Estado:</label>
+            <select id="stateSelect"></select>
+            <br>
+      
+            <label for="celular">Telefono/Celular:</label><br>
+            <input type="number" name="celular" id="celular" required><br><br>
+        
+            <label for="domicilio">Domicilio:</label><br>
+            <input type="text" name="domicilio" id="domicilio" required><br><br>
+        
+            <h2>DATOS DE LA ESCUELA SECUNDARIA DE PROCEDENCIA</h2>
+        
+            <label for="nom_Sec">Nombre de la secundaria</label><br>
+            <input type="text" name="nom_Sec" id="nom_Sec"><br>
+      
+            <label for="tip_sec">Tipo de secundaria</label><br>
+            <select name="tipo_secindaria" id="tip_sec">
+                <option value="opcion1">Tecnica</option>
+                <option value="opcion2">General</option>
+                <option value="opcion1">Comunitaria</option>
+                <option value="opcion2">Para adultos</option>
+                <option value="opcion2">Telesecundaria</option>
+            </select>
+            <br><br>
+        <label for="entidad"> En la entidad o fuera?</label>
+            <select  id="entidad"><br>
+                <option value="opcion1">En la entidad</option>
+                <option value="opcion2">Fuera de la entidad</option>
+            </select>
+            <br><br>
+        
+            <h2>DATOS DEL TUTOR</h2>
+        
+            <label for="apellido_p2">Apellido Paterno:</label>
+            <input type="text" name="apellido_p" id="apellido_p2" required><br><br>
+        
+            <label for="apellido_m2">Apellido Materno:</label>
+            <input type="text" name="apellido_m" id="apellido_m2" required><br><br>
+        
+            <label for="nombre2">Nombre:</label>
+            <input type="text" name="nombre" id="nombre2" required><br><br>
+          
+            <label for="domicilio2">Domicilio:</label>
+            <input type="text" name="domicilio" id="domicilio2" required><br><br>
+        <br>
+      
+            <label for="celular2">Telefono/Celular:</label>
+            <input type="number" name="celular" id="celular2" required><br><br>
+      <br>
+            <div class="correo mb-3">
+              <label for="correo" class="form-label">Correo Electronico</label>
+              <input type="email" class="form-control" id="correo" aria-describedby="emailHelp">
+            </div>
+      <br>
+            <label for="sexo2" >Sexo</label>
+            <select name="opciones" id="sexo2">
+              <option value="opcion1">Masculino</option>
+              <option value="opcion2">Femenino</option>
+          </select>
+        <br><br>
+      
+        <label for="countrySelect2">País 2:</label>
+              <select id="countrySelect2" onchange="cargarEstados('countrySelect2', 'stateSelect2')">
+                  <option value="0">Selecciona un país</option>
+                  <option value="México">México</option>
+                  <option value="Argentina">Argentina</option>
+                  <option value="Brasil">Brasil</option>
+                  <option value="Canadá">Canadá</option>
+                  <option value="Chile">Chile</option>
+                  <option value="China">China</option>
+                  <option value="España">España</option>
+                  <option value="Estados Unidos">Estados Unidos</option>
+                  <option value="Francia">Francia</option>
+                  <option value="India">India</option>
+                  <option value="Italia">Italia</option>
+                  <option value="Japón">Japón</option>
+                  <option value="Reino Unido">Reino Unido</option>
+                  <option value="Rusia">Rusia</option>          </select>
+      
+              <label for="stateSelect2">Estado 2:</label>
+              <select id="stateSelect2"></select>
+        <br>
+        <input type="submit" class="btn" value="Enviar">
+      
+      </form>
+      </div>
+    
+        </section>
+       
+        <br><br><br><br><br>
+        <br><br><br><br><br><br>
+    
+        <script>
+            var estadosPorPais = {
+            
+                 
+                'México': ['Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 'Coahuila', 'Colima', 'Durango', 'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Estado de México', 'Ciudad de México', 'Michoacán', 'Morelos', 'Nayarit', 'Nuevo León', 'Oaxaca', 'Puebla', 'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz', 'Yucatán', 'Zacatecas'],
+                'Argentina': ['Buenos Aires', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán'],
+               'Brasil': ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahía', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Río de Janeiro', 'Río Grande del Norte', 'Río Grande del Sur', 'Rondônia', 'Roraima', 'Santa Catarina', 'Sao Paulo', 'Sergipe', 'Tocantins'],
+               'Estados Unidos': ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Carolina del Norte', 'Carolina del Sur', 'Colorado', 'Connecticut', 'Dakota del Norte', 'Dakota del Sur', 'Delaware', 'Florida', 'Georgia', 'Hawái', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Luisiana', 'Maine', 'Maryland', 'Massachusetts', 'Míchigan', 'Minnesota', 'Misisipi', 'Misuri', 'Montana', 'Nebraska', 'Nevada', 'Nueva Hampshire', 'Nueva Jersey', 'Nueva York', 'Nuevo México', 'Ohio', 'Oklahoma', 'Oregón', 'Pensilvania', 'Rhode Island', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Virginia Occidental', 'Washington', 'Wisconsin', 'Wyoming'],
+               'Canadá': ['Alberta', 'Columbia Británica', 'Isla del Príncipe Eduardo', 'Manitoba', 'Nueva Brunswick', 'Nueva Escocia', 'Nunavut', 'Ontario', 'Quebec', 'Saskatchewan', 'Terranova y Labrador', 'Territorios del Noroeste', 'Yukón'],
+               'España': ['Andalucía', 'Aragón', 'Asturias', 'Canarias', 'Cantabria', 'Castilla-La Mancha', 'Castilla y León', 'Cataluña', 'Comunidad Valenciana', 'Extremadura', 'Galicia', 'Islas Baleares', 'La Rioja', 'Madrid', 'Murcia', 'Navarra', 'País Vasco'],
+               'Francia': ['Auvernia-Ródano-Alpes', 'Borgoña-Franco Condado', 'Bretaña', 'Centro-Valle de Loira', 'Córcega', 'Gran Este', 'Hauts-de-France', 'Isla de Francia', 'Normandía', 'Nueva Aquitania', 'Occitania', 'Países del Loira', 'Provenza-Alpes-Costa Azul'],
+               'Italia': ['Abruzos', 'Basilicata', 'Calabria', 'Campania', 'Emilia-Romaña', 'Friuli-Venecia Julia', 'Lacio', 'Liguria', 'Lombardía', 'Molise', 'Piamonte', 'Puglia', 'Sardegna', 'Sicilia', 'Toscana', 'Trentino-Alto Adigio', 'Umbria', 'Valle de Aosta', 'Véneto'],
+               'Reino Unido': ['Inglaterra', 'Escocia', 'Gales', 'Irlanda del Norte'],
+               'Australia': ['Nueva Gales del Sur', 'Victoria', 'Queensland', 'Australia Occidental', 'Australia Meridional', 'Tasmania', 'Territorio del Norte', 'Territorio de la Capital Australiana']};
+            
+            var estadosPorPais2 = {
+            
+                 
+                'México': ['Aguascalientes', 'Baja California', 'Baja California Sur', 'Campeche', 'Chiapas', 'Chihuahua', 'Coahuila', 'Colima', 'Durango', 'Guanajuato', 'Guerrero', 'Hidalgo', 'Jalisco', 'Estado de México', 'Ciudad de México', 'Michoacán', 'Morelos', 'Nayarit', 'Nuevo León', 'Oaxaca', 'Puebla', 'Querétaro', 'Quintana Roo', 'San Luis Potosí', 'Sinaloa', 'Sonora', 'Tabasco', 'Tamaulipas', 'Tlaxcala', 'Veracruz', 'Yucatán', 'Zacatecas'],
+                'Argentina': ['Buenos Aires', 'Catamarca', 'Chaco', 'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa', 'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan', 'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego', 'Tucumán'],
+               'Brasil': ['Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahía', 'Ceará', 'Distrito Federal', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernambuco', 'Piauí', 'Río de Janeiro', 'Río Grande del Norte', 'Río Grande del Sur', 'Rondônia', 'Roraima', 'Santa Catarina', 'Sao Paulo', 'Sergipe', 'Tocantins'],
+               'Estados Unidos': ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Carolina del Norte', 'Carolina del Sur', 'Colorado', 'Connecticut', 'Dakota del Norte', 'Dakota del Sur', 'Delaware', 'Florida', 'Georgia', 'Hawái', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Luisiana', 'Maine', 'Maryland', 'Massachusetts', 'Míchigan', 'Minnesota', 'Misisipi', 'Misuri', 'Montana', 'Nebraska', 'Nevada', 'Nueva Hampshire', 'Nueva Jersey', 'Nueva York', 'Nuevo México', 'Ohio', 'Oklahoma', 'Oregón', 'Pensilvania', 'Rhode Island', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Virginia Occidental', 'Washington', 'Wisconsin', 'Wyoming'],
+               'Canadá': ['Alberta', 'Columbia Británica', 'Isla del Príncipe Eduardo', 'Manitoba', 'Nueva Brunswick', 'Nueva Escocia', 'Nunavut', 'Ontario', 'Quebec', 'Saskatchewan', 'Terranova y Labrador', 'Territorios del Noroeste', 'Yukón'],
+               'España': ['Andalucía', 'Aragón', 'Asturias', 'Canarias', 'Cantabria', 'Castilla-La Mancha', 'Castilla y León', 'Cataluña', 'Comunidad Valenciana', 'Extremadura', 'Galicia', 'Islas Baleares', 'La Rioja', 'Madrid', 'Murcia', 'Navarra', 'País Vasco'],
+               'Francia': ['Auvernia-Ródano-Alpes', 'Borgoña-Franco Condado', 'Bretaña', 'Centro-Valle de Loira', 'Córcega', 'Gran Este', 'Hauts-de-France', 'Isla de Francia', 'Normandía', 'Nueva Aquitania', 'Occitania', 'Países del Loira', 'Provenza-Alpes-Costa Azul'],
+               'Italia': ['Abruzos', 'Basilicata', 'Calabria', 'Campania', 'Emilia-Romaña', 'Friuli-Venecia Julia', 'Lacio', 'Liguria', 'Lombardía', 'Molise', 'Piamonte', 'Puglia', 'Sardegna', 'Sicilia', 'Toscana', 'Trentino-Alto Adigio', 'Umbria', 'Valle de Aosta', 'Véneto'],
+               'Reino Unido': ['Inglaterra', 'Escocia', 'Gales', 'Irlanda del Norte'],
+               'Australia': ['Nueva Gales del Sur', 'Victoria', 'Queensland', 'Australia Occidental', 'Australia Meridional', 'Tasmania', 'Territorio del Norte', 'Territorio de la Capital Australiana']};
+            
+            function cargarEstados(idPais, idEstado) {
+                var selectPais = document.getElementById(idPais);
+                var selectEstado = document.getElementById(idEstado);
+            
+                var selectedPais = selectPais.value;
+                var estados = selectedPais === "0" ? [] : estadosPorPais[selectedPais];
+            
+                selectEstado.innerHTML = '<option value="">Seleccionar estado</option>';
+            
+                estados.forEach(function (estado) {
+                    var option = document.createElement('option');
+                    option.value = estado;
+                    option.textContent = estado;
+                    selectEstado.appendChild(option);
+                });
+            
+            }
+            
+            // Inicializa los selects
+            cargarEstados('countrySelect', 'stateSelect');
+            cargarEstados('countrySelect2', 'stateSelect2');
+            </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+</body>
+</html>

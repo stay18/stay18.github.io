@@ -1,1 +1,75 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-color: #ff0000;
+}
 
+.navbar {
+    z-index: 1;
+    height: 60px;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 5vh; /* Ajusta la posición superior de la imagen en relación con la altura de la ventana */
+    right: 70vw; /* Ajusta la posición derecha de la imagen en relación con el ancho de la ventana */
+    width: 10%; /* Ancho deseado de la imagen */
+    border-radius: 50%;
+    height: auto;
+    z-index: 2;
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar-warning {
+    background-color: #ffc107;
+}
+
+.login-container {
+    z-index: 0;
+    margin: 4rem auto 0;
+    padding: 5vh 4vw 0 4vw; /* Ajusta el padding en relación con las dimensiones de la ventana */
+    width: 90%; /* Ajusta el ancho al 90% del contenedor padre */
+    max-width: 500px;
+    min-height: 1800px;
+    box-shadow: 0 50px 70px -20px rgb(245, 245, 21);
+}
+
+.login-container:after {
+    content: ""; /* Agrega este estilo para que el pseudo-elemento tenga contenido */
+    display: inline-block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+.inico {
+    width: 50%; /* Ajusta el ancho al 50% del contenedor padre */
+    max-width: 200px; /* Ancho máximo de 200px */
+    height: auto;
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .overlay-image {
+        top: 10vh; /* Ajusta la posición superior en relación con la altura de la ventana */
+        right: 10vw; /* Ajusta la posición derecha en relación con el ancho de la ventana */
+        width: 20%;
+    }
+
+    .login-container {
+        padding: 2rem;
+    }
+}
